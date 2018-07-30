@@ -24,7 +24,7 @@
 	</servlet-mapping>
 	<filter>
 		<filter-name>CorsFilter</filter-name>
-		<filter-class>com.nesovic.narudzbina.cors.CORSFilter</filter-class>
+		<filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
 		<init-param>
     <param-name>cors.allowed.origins</param-name>
     <param-value>*</param-value>

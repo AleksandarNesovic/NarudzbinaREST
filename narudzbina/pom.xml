@@ -46,6 +46,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			
 		</plugins>
 	</build>
 
@@ -54,7 +55,7 @@
 			<dependency>
 				<groupId>org.glassfish.jersey</groupId>
 				<artifactId>jersey-bom</artifactId>
-				<version>${jersey.version}</version>
+				<version>2.27</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -140,6 +141,12 @@
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.heroku.api/heroku-api -->
+		<dependency>
+			<groupId>com.heroku.api</groupId>
+			<artifactId>heroku-api</artifactId>
+			<version>0.32</version>
 		</dependency>
 
 

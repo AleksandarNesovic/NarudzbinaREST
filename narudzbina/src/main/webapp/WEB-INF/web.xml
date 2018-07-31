@@ -13,11 +13,7 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<servlet>
-		<servlet-name>Swagger Configuration</servlet-name>
-		<servlet-class>com.nesovic.narudzbina.servlet.SwaggerConfigurationServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+	
 	 <servlet>
         <servlet-name>SwaggerBootstrap</servlet-name>
         <servlet-class>com.nesovic.narudzbina.servlet.SwaggerConfigurationServlet</servlet-class>

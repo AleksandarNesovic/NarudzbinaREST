@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.ext.Provider;
 
 //Enable it for Servlet 3.x implementations
-/* @ WebFilter(asyncSupported = true, urlPatterns = { "/*" }) */
+@ WebFilter(asyncSupported = true, urlPatterns = { "/*" }) 
 @Provider
 public class CORSFilter implements Filter {
 

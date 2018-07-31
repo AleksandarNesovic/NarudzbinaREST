@@ -18,7 +18,6 @@ public class SwaggerConfigurationServlet extends HttpServlet{
 		beanConfig.setHost("localhost:8080");
 		beanConfig.setTitle("Narudzbina app Swagger Docs");
 		beanConfig.setResourcePackage("com.nesovic.narudzbina");
-		beanConfig.setFilterClass("CORSFilter");
 		beanConfig.setPrettyPrint(true);
 		beanConfig.setScan(true);
 		beanConfig.setSchemes(new String[] {"http"});

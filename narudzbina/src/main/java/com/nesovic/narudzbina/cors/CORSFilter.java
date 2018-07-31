@@ -15,7 +15,7 @@ import javax.ws.rs.ext.Provider;
 
 //Enable it for Servlet 3.x implementations
 /* @ WebFilter(asyncSupported = true, urlPatterns = { "/*" }) */
-@Provider
+//@Provider
 public class CORSFilter implements Filter {
 
 	 public CORSFilter() {

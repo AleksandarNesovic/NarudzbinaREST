@@ -14,7 +14,7 @@ public class SwaggerConfigurationServlet extends HttpServlet{
 		super.init(config);
 		BeanConfig beanConfig=new BeanConfig();
 		beanConfig.setBasePath("/");
-		beanConfig.setHost("test-narudzbina.herokuapp.com/#/");
+		beanConfig.setHost("test-narudzbina.herokuapp.com/#");
 		beanConfig.setTitle("Narudzbina app Swagger Docs");
 		beanConfig.setResourcePackage("com.nesovic.narudzbina");
 		beanConfig.setPrettyPrint(true);

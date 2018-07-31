@@ -10,11 +10,12 @@ public class SwaggerConfigurationServlet extends HttpServlet{
 
 	private static final long serialVersionUID = 1L;
 	
+	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
 		BeanConfig beanConfig=new BeanConfig();
 		beanConfig.setBasePath("/narudzbina/webapi/");
-		beanConfig.setHost("test-narudzbina.herokuapp.com/#");
+		beanConfig.setHost("localhost:8080");
 		beanConfig.setTitle("Narudzbina app Swagger Docs");
 		beanConfig.setResourcePackage("com.nesovic.narudzbina");
 		beanConfig.setPrettyPrint(true);

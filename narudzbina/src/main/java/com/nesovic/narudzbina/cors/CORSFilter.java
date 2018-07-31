@@ -32,26 +32,26 @@ public class CORSFilter implements Filter {
 	    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
 	            throws IOException, ServletException {
 	 
+	    	HttpServletResponse response=(HttpServletResponse) servletResponse;
 	        HttpServletRequest request = (HttpServletRequest) servletRequest;
 	        System.out.println("CORSFilter HTTP Request: " + request.getMethod());
 	 
 	        // Authorize (allow) all domains to consume the content
-	        ((HttpServletResponse) servletResponse).setHeader("Access-Control-Allow-Headers", "Origin,Accept,Access-Control-Request-Method, Access-Control-Request-Headers,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With,api_key,*");
-	        ((HttpServletResponse) servletResponse).setHeader("Access-Control-Request-Headers", " Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport,  *");
-	        ((HttpServletResponse) servletResponse).setHeader("Access-Control-Allow-Origin", "*");
-	        ((HttpServletResponse) servletResponse).setHeader("Access-Control-Allow-Methods","GET, OPTIONS, HEAD, PUT, POST");
+	        response.setHeader("Access-Control-Allow-Headers", "Origin,Accept,Access-Control-Request-Method, Access-Control-Request-Headers,Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With,api_key,*");
+	        response.setHeader("Access-Control-Request-Headers", " Origin, X-Atmosphere-tracking-id, X-Atmosphere-Framework, X-Cache-Date, Content-Type, X-Atmosphere-Transport,  *");
+	        response.setHeader("Access-Control-Allow-Origin", "*");
+	        response.setHeader("Access-Control-Allow-Methods","GET, OPTIONS, HEAD, PUT, POST");
 	        
-	        HttpServletResponse resp = (HttpServletResponse) servletResponse;
+	       // HttpServletResponse resp = (HttpServletResponse) servletResponse;
 	        
 	 
 	        // For HTTP OPTIONS verb/method reply with ACCEPTED status code -- per CORS handshake
-	        if (request.getMethod().equals("OPTIONS")) {
+	   /*     if (request.getMethod().equals("OPTIONS")) {
 	            resp.setStatus(HttpServletResponse.SC_ACCEPTED);
-	            return;
-	        }
+	          }  */
 	 
 	        // pass the request along the filter chain
-	        chain.doFilter(request, servletResponse);
+	        chain.doFilter(request, response);
 	    }
 	 
 	    /**

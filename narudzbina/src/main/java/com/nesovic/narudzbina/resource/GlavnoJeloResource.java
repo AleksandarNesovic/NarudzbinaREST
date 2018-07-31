@@ -53,7 +53,7 @@ public class GlavnoJeloResource {
 		GlavnoJelo glavnoJelo=glavno.insertGlavnoJelo(g);
 		String idJela=String.valueOf(glavnoJelo.getId_glj());
 		URI uri=uriInfo.getAbsolutePathBuilder().path(idJela).build();
-		return Response.created(uri).entity(glavnoJelo).build();
+		return Response.created(uri).header("Access-Control-Allow-Origin", "*").entity(glavnoJelo).header("Access-Control-Allow-Methods", "POST").build();
 	}
 	@DELETE
 	@Path("/{id}")

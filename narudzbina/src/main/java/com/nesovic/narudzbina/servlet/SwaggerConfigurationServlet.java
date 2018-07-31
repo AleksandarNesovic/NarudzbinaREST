@@ -20,7 +20,7 @@ public class SwaggerConfigurationServlet extends HttpServlet{
 		beanConfig.setResourcePackage("com.nesovic.narudzbina");
 		beanConfig.setPrettyPrint(true);
 		beanConfig.setScan(true);
-		beanConfig.setSchemes(new String[] {"http","https"});
+		beanConfig.setSchemes(new String[] {"http"});
 		beanConfig.setVersion("1.0");
 	}
 }

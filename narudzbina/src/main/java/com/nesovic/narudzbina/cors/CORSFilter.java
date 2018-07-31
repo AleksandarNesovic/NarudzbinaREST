@@ -10,11 +10,16 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.ext.Provider;
 
 //Enable it for Servlet 3.x implementations
 /* @ WebFilter(asyncSupported = true, urlPatterns = { "/*" }) */
 //@Provider
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class CORSFilter implements Filter {
 
 	 public CORSFilter() {
